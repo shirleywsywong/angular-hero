@@ -3,9 +3,3 @@ export class Hero {
     name: string;
     hero: boolean;
 }
-
-export class Villain {
-    id: number;
-    name: string;
-    hero: boolean;
-}

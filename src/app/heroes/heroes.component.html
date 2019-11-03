@@ -1,14 +1,39 @@
-<h2>{{hero.name| uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<h2>{{  }<!---->} this is called an interpolation binding</h2>
+<h2>{{heroOG.name| uppercase}} Details</h2>
+<div><span>id: </span>{{heroOG.id}}</div>
+<div><span>name: </span>{{heroOG.name}}</div>
 
 <div>
+  <p>ngModel is a 2 way binding method from Forms Module: 1.from variable object property to textbox, 2. vice versa</p>
+  <p>Changes made to the variable object property updates the object itself</p>
   <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name"/>
+    <input [(ngModel)]="heroOG.name" placeholder="name"/>
   </label>
 </div>
 
-<h2>{{villain.name| uppercase}} Details</h2>
-<div><span>id: </span>{{villain.id}}</div>
-<div><span>name: </span>{{villain.name}}</div>
+<h2>{{heroSix.name| uppercase}} Details</h2>
+<div><span>id: </span>{{heroSix.id}}</div>
+<div><span>name: </span>{{heroSix.name}}</div>
+<div><span>age: </span>{{heroSix.age}}</div>
+<div><span>power: </span>{{heroSix.power}}</div>
 <br>
+<br>
+<ul class="heroes">
+  <p>ngFor is a looping method</p>
+  <p>[] this is the class binding</p>
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<br>
+<br>
+<div *ngIf="selectedHero">
+  <p>ngIf is a "ternery" where if "selectedHero" is defined, then display info, if not, don't display</p>
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
+</div>
