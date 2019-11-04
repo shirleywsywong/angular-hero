@@ -27,13 +27,6 @@
 </ul>
 <br>
 <br>
-<div *ngIf="selectedHero">
-  <p>ngIf is a "ternery" where if "selectedHero" is defined, then display info, if not, don't display</p>
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-    </label>
-  </div>
-</div>
+<p>[champion] is called a property binding, where information flows only 1 way.</p>
+<p>[champion] needs to match the @Input in hero-detail component.</p>
+<app-hero-detail [champion]="selectedHero"></app-hero-detail>

@@ -27,9 +27,7 @@ export class HeroesComponent implements OnInit {
     power: 'healing'
   };
 
-  heroSeven;
-
-  //the list of heroes from hero.ts, importing the mock heros, the "prototype" of Hero is already declared in the mock heroes file
+  //the list of heroes from mock-heroes.ts, importing the mock heros, the "prototype" of Hero is already declared in the mock heroes file
   heroes = HEROES;
 
   //doesn't need to use const/let/var to declare variable, can just state it on its own

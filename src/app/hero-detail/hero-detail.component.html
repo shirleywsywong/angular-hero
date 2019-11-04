@@ -1,0 +1,10 @@
+<div *ngIf="champion">
+  <p>ngIf is a "ternery" where if "champion" is defined, then display info, if not, don't display</p>
+  <h2>{{champion.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{champion.id}}</div>
+  <form>
+    <label>name:
+      <input [(ngModel)]="champion.name" placeholder="name" name="name"/>
+    </label>
+  </form>
+</div>
